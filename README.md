@@ -22,9 +22,9 @@ Now you will want to replace the content of the Html/Text module on the page. If
 
 Now find the Edit button for the Html/Text module and select it. Choose the Raw HTML tab, as the Rich Text editor will not be able to support the content you need to include. Find the content.txt file in the root folder of this project (same folder as the solution file). Open the text file and copy and paste its contents into the Raw HTML editor and then Save. The page will be redisplayed and should look exactly the way it does in the video capture above.
 
-Note that you can open the Html/Text module again (and choose the Raw HTML editor tab as the Rich Text editor will be blank). You can remove specific ```<section>``` blocks if you want to exclude some of the template content. Or you can copy and paste sections if you want multiple sections - but only chnage the content, never the HTML markup if you want to preserve the appearance of the page.
+Note that you can open the Html/Text module again (and choose the Raw HTML editor tab as the Rich Text editor will be blank). You can remove specific ```<section>``` blocks if you want to exclude some of the template content. Or you can copy and paste sections if you want multiple sections - but only change the content, never the HTML markup if you want to preserve the appearance of the page.
 
-One large benefit of the BootstrapMade templates is that they are fully responsive and work well in all screen sizes, so you do not need to worry about tweaking CSS.
+One large benefit of the BootstrapMade templates is that they are fully responsive and work well in all screen sizes, so you do not need to worry about understanding CSS.
 
 Also note that although the BootstrapMade templates can be downloaded for free, you need to purchase a license for $19 in order to use it on a business website.
 
