@@ -1,0 +1,56 @@
+@namespace Oqtane.Theme.Arsha
+@inherits MenuItemsBase
+
+<ul>
+    @foreach (var childPage in GetChildPages())
+    {
+        var _attributes = new Dictionary<string, object>();
+        _attributes.Add("href", GetUrl(childPage));
+        var _target = GetTarget(childPage);
+        if (!string.IsNullOrEmpty(_target))
+        {
+            _attributes.Add("target", _target);
+        }
+
+        if (!childPage.HasChildren)
+        {
+            if (childPage.Level == 0)
+            {
+                if (childPage.PageId == PageState.Page.PageId)
+                {
+                    <li>
+                        <a class="nav-link scrollto active" @attributes="_attributes">@childPage.Name</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a class="nav-link scrollto" @attributes="_attributes">@childPage.Name</a>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <a @attributes="_attributes">@childPage.Name</a>
+                </li>
+            }
+        }
+        else
+        {
+            <li class="dropdown">
+                <a @attributes="_attributes"><span>@childPage.Name</span> 
+                    @if (childPage.Level == 0)
+                    {
+                        <i class="bi bi-chevron-down"></i>
+                    }
+                    else
+                    {
+                        <i class="bi bi-chevron-right"></i>
+                    }
+                </a>
+                <NavMenuItems ParentPage="childPage" Pages="Pages" />
+            </li>
+        }
+    }
+</ul>

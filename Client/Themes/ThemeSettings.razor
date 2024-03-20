@@ -1,0 +1,103 @@
+@namespace Oqtane.Theme.Arsha
+@inherits ModuleBase
+@implements Oqtane.Interfaces.ISettingsControl
+@inject ISettingService SettingService
+@attribute [OqtaneIgnore]
+
+<div class="container">
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="_footer" HelpText="Optionally enter hero section HTML markup for this page">Hero HTML:</Label>
+        <div class="col-sm-9">
+            <button type="button" class="btn btn-secondary" @onclick="LoadDefaultHero">Load Default Hero HTML</button>
+            <textarea id="_hero" class="form-control" @bind="@_hero" rows="5"></textarea>
+        </div>
+    </div>
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="_footer" HelpText="Enter footer section HTML markup for the site">Footer HTML:</Label>
+        <div class="col-sm-9">
+            <textarea id="_footer" class="form-control" @bind="@_footer" rows="5"></textarea>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int pageId = -1;
+    private string _hero = "";
+    private string _footer = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (PageState.QueryString.ContainsKey("id"))
+        {
+            pageId = int.Parse(PageState.QueryString["id"]);
+        }
+
+        try
+        {
+            await LoadSettings();
+        }
+        catch (Exception ex)
+        {
+            await logger.LogError(ex, "Error Loading Settings {Error}", ex.Message);
+            AddModuleMessage("Error Loading Settings", MessageType.Error);
+        }
+    }
+
+    private async Task LoadSettings()
+    {
+        var settings = await SettingService.GetPageSettingsAsync(pageId);
+        _hero = SettingService.GetSetting(settings, GetType().Namespace + ":Hero", "");
+
+        settings = PageState.Site.Settings;
+        _footer = SettingService.GetSetting(settings, GetType().Namespace + ":Footer", "");
+    }
+
+    public async Task UpdateSettings()
+    {
+        try
+        {
+            var settings = await SettingService.GetPageSettingsAsync(pageId);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _hero, false);
+            await SettingService.UpdatePageSettingsAsync(settings, pageId);
+
+            settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footer, false);
+            await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
+        }
+        catch (Exception ex)
+        {
+            await logger.LogError(ex, "Error Saving Settings {Error}", ex.Message);
+            AddModuleMessage("Error Saving Settings", MessageType.Error);
+        }
+    }
+
+    private void LoadDefaultHero()
+    {
+        _hero = DefaultHero;
+    }
+
+    private string DefaultHero
+    {
+        get
+        {
+            return
+            "<section id=\"hero\" class=\"d-flex align-items-center\">\n" +
+            "  <div class=\"container\">\n" +
+            "     <div class=\"row\">\n" +
+            "          <div class=\"col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n" +
+            "              <h1>Your Title</h1>\n" +
+            "              <h2>A subtitle for more information</h2>\n" +
+            "              <div class=\"d-flex justify-content-center justify-content-lg-start\">\n" +
+            "                  <a href=\"#about\" class=\"btn-get-started scrollto\">Your Link</a>\n" +
+            "              </div>\n" +
+            "          </div>\n" +
+            "          <div class=\"col-lg-6 order-1 order-lg-2 hero-img\" data-aos=\"zoom-in\" data-aos-delay=\"200\">\n" +
+            "              <img src=\"Themes/Oqtane.Theme.Arsha/assets/img/hero-img.png\" class=\"img-fluid animated\" alt=\"\">\n" +
+            "          </div>\n" +
+            "      </div>\n" +
+            "  </div>\n" +
+            "</section>\n";
+        }
+    }
+
+}

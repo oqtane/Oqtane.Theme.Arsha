@@ -1,0 +1,22 @@
+@namespace Oqtane.Theme.Arsha
+@inherits ContainerBase
+
+@if (ModuleState.Title != "-")
+{
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <ModuleActions />
+            <div class="section-title">
+                <h2>@ModuleState.Title</h2>
+            </div>
+            <div class="row">
+                <ModuleInstance />
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <ModuleActions />
+    <ModuleInstance />
+}

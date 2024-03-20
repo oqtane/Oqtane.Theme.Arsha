@@ -1,0 +1,9 @@
+@namespace Oqtane.Theme.Arsha
+
+@inherits MenuBase
+
+@if (MenuPages.Any())
+{
+    <NavMenuItems ParentPage="null" Pages="MenuPages" />
+    <i class="bi bi-list mobile-nav-toggle"></i>
+}
