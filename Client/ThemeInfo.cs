@@ -13,6 +13,7 @@ namespace Oqtane.Theme.Arsha
             Version = "1.0.0",
             PackageName = "Oqtane.Theme.Arsha",
             ThemeSettingsType = "Oqtane.Theme.Arsha.ThemeSettings, Oqtane.Theme.Arsha.Client.Oqtane",
+            ContainerSettingsType = "Oqtane.Theme.Arsha.ContainerSettings, Oqtane.Theme.Arsha.Client.Oqtane",
             Resources = new List<Resource>()
             {
                 // Google Fonts

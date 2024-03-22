@@ -1,22 +1,76 @@
 @namespace Oqtane.Theme.Arsha
 @inherits ContainerBase
+@inject ISettingService SettingService
 
-@if (ModuleState.Title != "-")
+@if (_title)
 {
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <ModuleActions />
-            <div class="section-title">
-                <h2>@ModuleState.Title</h2>
+    @if (_animate)
+    {
+        <section>
+            <div class="container" data-aos="fade-up">
+                <ModuleActions />
+                @if (ModuleState.Title != "-")
+                {
+                    <div class="section-title">
+                        <h2>@ModuleState.Title</h2>
+                    </div>
+                }
+                <div class="row">
+                    <ModuleInstance />
+                </div>
             </div>
-            <div class="row">
-                <ModuleInstance />
+        </section>
+    }
+    else
+    {
+        <section>
+            <div class="container">
+                <ModuleActions />
+                @if (ModuleState.Title != "-")
+                {
+                    <div class="section-title">
+                        <h2>@ModuleState.Title</h2>
+                    </div>
+                }
+                <div class="row">
+                    <ModuleInstance />
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    }
 }
 else
 {
-    <ModuleActions />
-    <ModuleInstance />
+    @if (_animate)
+    {
+        <section data-aos="fade-up">
+            <ModuleActions />
+            <ModuleInstance />
+        </section>
+    }
+    else
+    {
+        <section>
+            <ModuleActions />
+            <ModuleInstance />
+        </section>
+    }
+}
+
+@code {
+    private bool _title = true;
+    private bool _animate = false;
+
+    protected override void OnParametersSet()
+    {
+        try
+        {
+            _title = bool.Parse(SettingService.GetSetting(ModuleState.Settings, GetType().Namespace + ":Title", "true"));
+            _animate = bool.Parse(SettingService.GetSetting(ModuleState.Settings, GetType().Namespace + ":Animate", "false"));
+        }
+        catch
+        {
+            // error loading container settings
+        }
+    }
 }
