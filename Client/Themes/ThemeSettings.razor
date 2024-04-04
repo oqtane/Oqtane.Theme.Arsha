@@ -57,11 +57,11 @@
         try
         {
             var settings = await SettingService.GetPageSettingsAsync(pageId);
-            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _hero, false);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _hero);
             await SettingService.UpdatePageSettingsAsync(settings, pageId);
 
             settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
-            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footer, false);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footer);
             await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
         }
         catch (Exception ex)
