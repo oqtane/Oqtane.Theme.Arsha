@@ -36,7 +36,8 @@ namespace Oqtane.Theme.Arsha
                 new Resource { ResourceType = ResourceType.Script, Url = "~/assets/vendor/swiper/swiper-bundle.min.js", Location = ResourceLocation.Body },
                 new Resource { ResourceType = ResourceType.Script, Url = "~/assets/vendor/waypoints/noframework.waypoints.js", Location = ResourceLocation.Body },
                 // Template Main JS File 
-                new Resource { ResourceType = ResourceType.Script, Url = "~/assets/js/main.js", Location = ResourceLocation.Body, Reload = true }
+                new Resource { ResourceType = ResourceType.Script, Url = "~/assets/js/main.js", Location = ResourceLocation.Body, Reload = true, RenderMode = RenderModes.Static },
+                new Resource { ResourceType = ResourceType.Script, Url = "~/assets/js/interop.js", Location = ResourceLocation.Body, RenderMode = RenderModes.Interactive }
             }
         };
     }

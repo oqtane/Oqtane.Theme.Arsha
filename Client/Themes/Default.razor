@@ -75,6 +75,7 @@ else
             _hero = SettingService.GetSetting(PageState.Page.Settings, GetType().Namespace + ":Hero", "");
             if (!string.IsNullOrEmpty(_hero))
             {
+                _hero = Utilities.FormatContent(_hero, PageState.Alias, "render");
                 _headerclass = "fixed-top";
             }
 
@@ -86,11 +87,19 @@ else
                 settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footer, false);
                 await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
             }
+            _footer = Utilities.FormatContent(_footer, PageState.Alias, "render");
         }
         catch
         {
             // not implemented
         }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        var interop = new Interop(JSRuntime);
+        await interop.Load();
     }
 
     private string DefaultFooter
