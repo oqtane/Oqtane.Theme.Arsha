@@ -65,7 +65,7 @@ else
     public override string Panes => PaneNames.Default;
 
     private string _hero = "";
-    private string _headerclass = "fixed-top header-inner-pages";
+    private string _headerclass = "";
     private string _footer = "";
 
     protected override async Task OnParametersSetAsync()
@@ -73,6 +73,7 @@ else
         try
         {
             _hero = SettingService.GetSetting(PageState.Page.Settings, GetType().Namespace + ":Hero", "");
+            _headerclass = "fixed-top header-inner-pages";
             if (!string.IsNullOrEmpty(_hero))
             {
                 _hero = Utilities.FormatContent(_hero, PageState.Alias, "render");
