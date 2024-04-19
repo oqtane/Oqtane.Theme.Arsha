@@ -6,6 +6,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="@_headerclass">
     <div class="container d-flex align-items-center">
+        <a id="top"></a>
         @if (PageState.Site.LogoFileId != null)
         {
             <a href="@PageState.Alias.Path" class="logo me-auto">
@@ -58,7 +59,7 @@ else
 @((MarkupString)_footer)
 <!-- End Footer -->
 
-<a href="@NavigateUrl()" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="@NavigateUrl()" class="back-to-top d-flex align-items-center justify-content-center" data-enhance-nav="false"><i class="bi bi-arrow-up-short"></i></a>
 
 @code {
     public override string Name => "Default";
