@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Oqtane.Client"><HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\Oqtane.Client.dll</HintPath></Reference>
-    <Reference Include="Oqtane.Shared"><HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\Oqtane.Shared.dll</HintPath></Reference>
+	  <PackageReference Include="Oqtane.Client" Version="5.2.0" />
+	  <PackageReference Include="Oqtane.Shared" Version="5.2.0" />
   </ItemGroup>
 
   <PropertyGroup>
