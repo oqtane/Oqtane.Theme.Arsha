@@ -8,7 +8,17 @@ https://github.com/oqtane/Oqtane.Theme.Arsha/assets/4840590/2a548fbb-6a0b-492a-8
 
 Notice how the theme preserves both the appearance of the BootstrapMade template as well as the animations.
 
-In order to reproduce the behavior in the video, clone this repo, open the solution in Visual Studio 2022 and perform a Build. Once the solution has been built you can set the Oqtane.Server as the Startup project and run it. Then you can navigate to Site Settings and choose the Arsha theme in the Appearance section. This will refresh the page and the site will have a new appearance. Note that the theme has a default display which works with Admin pages, etc... The footer content is the same throughout the site and can be modified through the user interface (explanation below).
+In order to reproduce the behavior in the video, clone this repo. Note that you need to ensure that the folder is organized as a sibling of the Oqtane framework in your local environment (ie. it is located within the same parent folder):  
+
+```
+/parent
+  /oqtane.framework
+  /Oqtane.Theme.Arsha
+```
+
+Organizing the folders in this way allows the system to automatically deploy the module DLLs to the Oqtane framework when your build the theme solution.
+
+Open the Arsha solution in Visual Studio 2022 and perform a Build. Once the solution has been built you can set the Oqtane.Server as the Startup project and run it. Then you can navigate to Site Settings and choose the Arsha theme in the Appearance section. This will refresh the page and the site will have a new appearance. Note that the theme has a default display which works with Admin pages, etc... The footer content is the same throughout the site and can be modified through the user interface (explanation below).
 
 Navigate to the Home page. Use the Control Panel to choose the Edit Page option. Choose the Theme Settings tab:
 
