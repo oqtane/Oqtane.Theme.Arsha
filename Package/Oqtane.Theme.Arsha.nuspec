@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Oqtane.Theme.Arsha</id>
-    <version>1.0.0</version>
+    <version>6.0.0</version>
     <authors>Oqtane Labs Inc</authors>
     <owners>Oqtane Labs Inc</owners>
     <title>Arsha</title>
@@ -16,12 +16,12 @@
     <releaseNotes></releaseNotes>
     <summary></summary>
     <dependencies>
-      <dependency id="Oqtane.Framework" version="5.1.0" />
+      <dependency id="Oqtane.Framework" version="6.0.1" />
     </dependencies>
   </metadata>
   <files>
-    <file src="..\Client\bin\Release\net8.0\Oqtane.Theme.Arsha.Client.Oqtane.dll" target="lib\net8.0" /> 
-    <file src="..\Client\bin\Release\net8.0\Oqtane.Theme.Arsha.Client.Oqtane.pdb" target="lib\net8.0" /> 
+    <file src="..\Client\bin\Release\net9.0\Oqtane.Theme.Arsha.Client.Oqtane.dll" target="lib\net9.0" /> 
+    <file src="..\Client\bin\Release\net9.0\Oqtane.Theme.Arsha.Client.Oqtane.pdb" target="lib\net9.0" /> 
     <file src="..\Client\wwwroot\**\*.*" target="wwwroot" /> 
     <file src="icon.png" target="" />
   </files>
