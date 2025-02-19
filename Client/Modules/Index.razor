@@ -1,0 +1,58 @@
+@using Oqtane.Modules.HtmlText.Services
+@using Oqtane.Modules.HtmlText.Models
+
+@namespace Oqtane.Theme.Arsha
+@inherits ModuleBase
+@inject NavigationManager NavigationManager
+@inject IHtmlTextService HtmlTextService
+@inject IModuleService ModuleService
+@inject IPageModuleService PageModuleService
+@inject IStringLocalizer<Index> Localizer
+
+<div class="container">
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="content" HelpText="Select the type of content you would like to include">Content:</Label>
+        <div class="col-sm-9">
+            <select id="content" class="form-select" @bind="@_content">
+                <option value="Clients">Clients</option>
+                <option value="About Us">About Us</option>
+                <option value="Why Us">Why Us</option>
+                <option value="Skills">Skills</option>
+                <option value="Services">Services</option>
+                <option value="Call To Action">Call To Action</option>
+                <option value="Portfolio">Portfolio</option>
+                <option value="Team">Team</option>
+                <option value="Pricing">Pricing</option>
+                <option value="FAQ">FAQ</option>
+            </select>
+        </div>
+    </div>
+    <br /><br />
+    <button type="button" class="btn btn-success" @onclick="AddContent">Add Content</button>
+</div>
+
+@code {
+    private string _content = "Clients";
+
+    private async Task AddContent()
+    {
+        // populate HtmlText module with default content
+        var htmltext = new HtmlText();
+        htmltext.ModuleId = ModuleState.ModuleId;
+        htmltext.Content = Localizer[_content];
+        await HtmlTextService.AddHtmlTextAsync(htmltext);
+
+        // change module definition to HtmlText
+        var module = await ModuleService.GetModuleAsync(ModuleState.ModuleId);
+        module.ModuleDefinitionName = "Oqtane.Modules.HtmlText, Oqtane.Client";
+        await ModuleService.UpdateModuleAsync(module);
+
+        // hide page module title
+        var pagemodule = await PageModuleService.GetPageModuleAsync(ModuleState.PageModuleId);
+        pagemodule.Title = "// " + _content;
+        await PageModuleService.UpdatePageModuleAsync(pagemodule);
+
+        // refresh page
+        NavigationManager.NavigateTo(Utilities.NavigateUrl(PageState.Alias.Path, PageState.Page.Path, ""));
+    }
+}

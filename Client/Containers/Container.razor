@@ -26,7 +26,7 @@
         <section>
             <div class="container">
                 <ModuleActions />
-                @if (ModuleState.Title != "-")
+                @if (ModuleState.Title != "-" && !ModuleState.Title.StartsWith("//"))
                 {
                     <div class="section-title">
                         <h2>@ModuleState.Title</h2>
