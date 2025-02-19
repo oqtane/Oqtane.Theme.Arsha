@@ -4,58 +4,27 @@
 
 @if (_title)
 {
-    @if (_animate)
-    {
-        <section>
-            <div class="container" data-aos="fade-up">
-                <ModuleActions />
-                @if (ModuleState.Title != "-")
-                {
-                    <div class="section-title">
-                        <h2>@ModuleState.Title</h2>
-                    </div>
-                }
-                <div class="row">
-                    <ModuleInstance />
+    <section data-aos="@((_animate) ? "fade-up" : "")">
+        <div class="container">
+            <ModuleActions />
+            @if (ModuleState.Title != "-")
+            {
+                <div class="section-title">
+                    <h2>@ModuleState.Title</h2>
                 </div>
+            }
+            <div class="row">
+                <ModuleInstance />
             </div>
-        </section>
-    }
-    else
-    {
-        <section>
-            <div class="container">
-                <ModuleActions />
-                @if (ModuleState.Title != "-" && !ModuleState.Title.StartsWith("//"))
-                {
-                    <div class="section-title">
-                        <h2>@ModuleState.Title</h2>
-                    </div>
-                }
-                <div class="row">
-                    <ModuleInstance />
-                </div>
-            </div>
-        </section>
-    }
+        </div>
+    </section>
 }
 else
 {
-    @if (_animate)
-    {
-        <section data-aos="fade-up">
-            <ModuleActions />
-            <ModuleInstance />
-        </section>
-    }
-    else
-    {
-        <section>
-            <ModuleActions />
-            <ModuleInstance />
-        </section>
-    }
+    <ModuleActions />
+    <ModuleInstance />
 }
+
 
 @code {
     private bool _title = true;
@@ -65,7 +34,8 @@ else
     {
         try
         {
-            _title = bool.Parse(SettingService.GetSetting(ModuleState.Settings, GetType().Namespace + ":Title", "true"));
+            _title = bool.Parse(SettingService.GetSetting(ModuleState.Settings, GetType().Namespace + ":Title", "true"))
+                && !ModuleState.Title.StartsWith("//");
             _animate = bool.Parse(SettingService.GetSetting(ModuleState.Settings, GetType().Namespace + ":Animate", "false"));
         }
         catch
