@@ -1,6 +1,6 @@
 # Oqtane.Theme.Arsha
 
-An Oqtane theme developed for Oqtane 5.1 using Static Server-Side Rendering and based on the BootstrapMade Arsha template (https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/).
+An Oqtane theme supporting both Interactive and Static render modes, based on the BootstrapMade Arsha template (https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/).
 
 Screen capture of the theme functionality is included below:
 
