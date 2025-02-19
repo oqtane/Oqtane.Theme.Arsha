@@ -13,7 +13,8 @@
     <div class="row mb-1 align-items-center">
         <Label Class="col-sm-3" For="content" HelpText="Select the type of content you would like to include">Content:</Label>
         <div class="col-sm-9">
-            <select id="content" class="form-select" @bind="@_content">
+            <select id="content" class="form-select" value="@_content" @onchange="(e => ContentChanged(e))">
+                <option value="-">&lt;Not Specified&gt;</option>
                 <option value="Clients">Clients</option>
                 <option value="About Us">About Us</option>
                 <option value="Why Us">Why Us</option>
@@ -27,12 +28,28 @@
             </select>
         </div>
     </div>
-    <br /><br />
-    <button type="button" class="btn btn-success" @onclick="AddContent">Add Content</button>
+    @if (_content != "-")
+    {
+        <br />
+        <div class="text-center mb-2">
+            <button type="button" class="btn btn-primary" @onclick="AddContent">Add Content</button>
+        </div>
+        <hr />
+        <div class="row mt-2">
+            @((MarkupString)Utilities.FormatContent(_view, PageState.Alias, "render"))
+        </div>
+    }
 </div>
 
 @code {
-    private string _content = "Clients";
+    private string _content = "-";
+    private string _view = "";
+
+    private void ContentChanged(ChangeEventArgs eventArgs)
+    {
+        _content = (string)eventArgs.Value;
+        _view = Localizer[_content];
+    }
 
     private async Task AddContent()
     {
