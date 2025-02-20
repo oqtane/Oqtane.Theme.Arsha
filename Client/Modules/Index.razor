@@ -56,7 +56,7 @@
         // populate HtmlText module with default content
         var htmltext = new HtmlText();
         htmltext.ModuleId = ModuleState.ModuleId;
-        htmltext.Content = Localizer[_content];
+        htmltext.Content = _view;
         await HtmlTextService.AddHtmlTextAsync(htmltext);
 
         // change module definition to HtmlText

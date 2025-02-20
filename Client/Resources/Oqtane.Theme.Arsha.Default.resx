@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Footer" xml:space="preserve">
+    <value>
+  &lt;!-- ======= Footer ======= --&gt;
+  &lt;footer id="footer"&gt;
+    &lt;div class="footer-newsletter"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row justify-content-center"&gt;
+          &lt;div class="col-lg-6"&gt;
+            &lt;h4&gt;Join Our Newsletter&lt;/h4&gt;
+            &lt;p&gt;Tamen quem nulla quae legam multos aute sint culpa legam noster magna&lt;/p&gt;
+            &lt;form action="" method="post"&gt;
+              &lt;input type="email" name="email"&gt;&lt;input type="submit" value="Subscribe"&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-top"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-lg-3 col-md-6 footer-contact"&gt;
+            &lt;h3&gt;Arsha&lt;/h3&gt;
+            &lt;p&gt;
+              A108 Adam Street &lt;br&gt;
+              New York, NY 535022&lt;br&gt;
+              United States &lt;br&gt;&lt;br&gt;
+              &lt;strong&gt;Phone:&lt;/strong&gt; +1 5589 55488 55&lt;br&gt;
+              &lt;strong&gt;Email:&lt;/strong&gt; info@example.com&lt;br&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-3 col-md-6 footer-links"&gt;
+            &lt;h4&gt;Useful Links&lt;/h4&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Terms of service&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-3 col-md-6 footer-links"&gt;
+            &lt;h4&gt;Our Services&lt;/h4&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Web Design&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Web Development&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Product Management&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Marketing&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Graphic Design&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-3 col-md-6 footer-links"&gt;
+            &lt;h4&gt;Our Social Networks&lt;/h4&gt;
+            &lt;p&gt;Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies&lt;/p&gt;
+            &lt;div class="social-links mt-3"&gt;
+              &lt;a href="#" class="twitter"&gt;&lt;i class="bx bxl-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href="#" class="facebook"&gt;&lt;i class="bx bxl-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href="#" class="instagram"&gt;&lt;i class="bx bxl-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href="#" class="google-plus"&gt;&lt;i class="bx bxl-skype"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href="#" class="linkedin"&gt;&lt;i class="bx bxl-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="container footer-bottom clearfix"&gt;
+      &lt;div class="copyright"&gt;
+        &amp;copy; Copyright &lt;strong&gt;&lt;span&gt;Your Company&lt;/span&gt;&lt;/strong&gt;. All Rights Reserved
+      &lt;/div&gt;
+      &lt;div class="credits"&gt;
+        &lt;!-- All the links in the footer should remain intact. --&gt;
+        &lt;!-- You can delete the links only if you purchased the pro version. --&gt;
+        &lt;!-- Licensing information: https://bootstrapmade.com/license/ --&gt;
+        &lt;!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ --&gt;
+        Designed by &lt;a href="https://bootstrapmade.com/"&gt;BootstrapMade&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+  &lt;!-- End Footer --&gt;
+    </value>
+  </data>
+  <data name="Hero" xml:space="preserve">
+    <value>
+  &lt;!-- ======= Hero ======= --&gt;
+  &lt;section id="hero" class="d-flex align-items-center"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200"&gt;
+          &lt;h1&gt;Better Solutions For Your Business&lt;/h1&gt;
+          &lt;h2&gt;We are team of talented designers making websites with Bootstrap&lt;/h2&gt;
+          &lt;div class="d-flex justify-content-center justify-content-lg-start"&gt;
+            &lt;a href="#about" class="btn-get-started scrollto"&gt;Get Started&lt;/a&gt;
+            &lt;a href="https://www.youtube.com/watch?v=A7KnkHe3AXY" class="glightbox btn-watch-video"&gt;&lt;i class="bi bi-play-circle"&gt;&lt;/i&gt;&lt;span&gt;Watch Video&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200"&gt;
+          &lt;img src="[wwwroot]Themes/Oqtane.Theme.Arsha/assets/img/hero-img.png" class="img-fluid animated" alt=""&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;!-- End Hero --&gt;
+    </value>
+  </data>
+</root>

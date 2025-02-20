@@ -2,38 +2,53 @@
 @inherits ModuleBase
 @implements Oqtane.Interfaces.ISettingsControl
 @inject ISettingService SettingService
+@inject IStringLocalizer<Default> Localizer
 @attribute [OqtaneIgnore]
 
 <div class="container">
     <div class="row mb-1 align-items-center">
-        <Label Class="col-sm-3" For="_footer" HelpText="Optionally enter hero section HTML markup for this page">Hero HTML:</Label>
+        <Label Class="col-sm-3" For="heroHTML" HelpText="Specify if you wish to include a hero section for this page">Hero Section?</Label>
         <div class="col-sm-9">
-            <button type="button" class="btn btn-secondary" @onclick="LoadDefaultHero">Load Default Hero HTML</button>
-            <textarea id="_hero" class="form-control" @bind="@_hero" rows="5"></textarea>
+            <select id="heroHTML" class="form-select" value="@_hero" @onchange="(e => HeroChanged(e))">
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+            @if (_hero == "True")
+            {
+                <textarea id="_heroHTML" class="form-control" @bind="@_heroHTML" rows="5"></textarea>
+            }
         </div>
     </div>
     <div class="row mb-1 align-items-center">
-        <Label Class="col-sm-3" For="_footer" HelpText="Enter footer section HTML markup for the site">Footer HTML:</Label>
+        <Label Class="col-sm-3" For="_footerHTML" HelpText="Specify if you wish to include a footer section for this site">Footer Section?</Label>
         <div class="col-sm-9">
-            <textarea id="_footer" class="form-control" @bind="@_footer" rows="5"></textarea>
+            <select id="footerHTML" class="form-select" value="@_footer" @onchange="(e => FooterChanged(e))">
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+            @if (_footer == "True")
+            {
+                <textarea id="footerHTML" class="form-control" @bind="@_footerHTML" rows="5"></textarea>
+            }
         </div>
     </div>
 </div>
 
 @code {
     private int pageId = -1;
-    private string _hero = "";
-    private string _footer = "";
+    private string _hero = "False";
+    private string _heroHTML = "";
+    private string _footer = "False";
+    private string _footerHTML = "";
 
     protected override async Task OnInitializedAsync()
     {
-        if (PageState.QueryString.ContainsKey("id"))
-        {
-            pageId = int.Parse(PageState.QueryString["id"]);
-        }
-
         try
         {
+            if (PageState.QueryString.ContainsKey("id"))
+            {
+                pageId = int.Parse(PageState.QueryString["id"]);
+            }
             await LoadSettings();
         }
         catch (Exception ex)
@@ -46,10 +61,44 @@
     private async Task LoadSettings()
     {
         var settings = await SettingService.GetPageSettingsAsync(pageId);
-        _hero = SettingService.GetSetting(settings, GetType().Namespace + ":Hero", "");
+        _heroHTML = SettingService.GetSetting(settings, GetType().Namespace + ":Hero", "");
+        _hero = (_heroHTML == "") ? "False" : "True";
 
         settings = PageState.Site.Settings;
-        _footer = SettingService.GetSetting(settings, GetType().Namespace + ":Footer", "");
+        _footerHTML = SettingService.GetSetting(settings, GetType().Namespace + ":Footer", "");
+        _footer = (_footerHTML == "") ? "False" : "True";
+    }
+
+    private void HeroChanged(ChangeEventArgs eventArgs)
+    {
+        _hero = (string)eventArgs.Value;
+        if (bool.Parse(_hero))
+        {
+            if (_heroHTML == "")
+            {
+                _heroHTML = Localizer["Hero"];
+            }
+        }
+        else
+        {
+            _heroHTML = "";
+        }
+    }
+
+    private void FooterChanged(ChangeEventArgs eventArgs)
+    {
+        _footer = (string)eventArgs.Value;
+        if (bool.Parse(_footer))
+        {
+            if (_footerHTML == "")
+            {
+                _footerHTML = Localizer["Footer"];
+            }
+        }
+        else
+        {
+            _footerHTML = "";
+        }
     }
 
     public async Task UpdateSettings()
@@ -57,11 +106,11 @@
         try
         {
             var settings = await SettingService.GetPageSettingsAsync(pageId);
-            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _hero);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _heroHTML);
             await SettingService.UpdatePageSettingsAsync(settings, pageId);
 
             settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
-            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footer);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footerHTML);
             await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
         }
         catch (Exception ex)
@@ -70,35 +119,4 @@
             AddModuleMessage("Error Saving Settings", MessageType.Error);
         }
     }
-
-    private void LoadDefaultHero()
-    {
-        _hero = DefaultHero;
-    }
-
-    private string DefaultHero
-    {
-        get
-        {
-            return
-            "<section id=\"hero\" class=\"d-flex align-items-center\">\n" +
-            "  <div class=\"container\">\n" +
-            "     <div class=\"row\">\n" +
-            "          <div class=\"col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n" +
-            "              <h1>Better Solutions For Your Business</h1>\n" +
-            "              <h2>We are team of talented designers making websites with Bootstrap</h2>\n" +
-            "              <div class=\"d-flex justify-content-center justify-content-lg-start\">\n" +
-            "                  <a href=\"#about\" class=\"btn-get-started scrollto\">Get Started</a>\n" +
-            "                  <a href=\"https://www.youtube.com/watch?v=A7KnkHe3AXY\" class=\"glightbox btn-watch-video\"><i class=\"bi bi-play-circle\"></i><span>Watch Video</span></a>\n" +
-            "              </div>\n" +
-            "          </div>\n" +
-            "          <div class=\"col-lg-6 order-1 order-lg-2 hero-img\" data-aos=\"zoom-in\" data-aos-delay=\"200\">\n" +
-            "              <img src=\"[wwwroot]Themes/Oqtane.Theme.Arsha/assets/img/hero-img.png\" class=\"img-fluid animated\" alt=\"\">\n" +
-            "          </div>\n" +
-            "      </div>\n" +
-            "  </div>\n" +
-            "</section>\n";
-        }
-    }
-
 }
