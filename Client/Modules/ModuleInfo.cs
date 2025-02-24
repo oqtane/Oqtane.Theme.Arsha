@@ -1,16 +1,16 @@
 using Oqtane.Models;
 using Oqtane.Modules;
 
-namespace Oqtane.Theme.Arsha
+namespace Oqtane.Module.Corporate
 {
     public class ModuleInfo : IModule
     {
         public ModuleDefinition ModuleDefinition => new ModuleDefinition
         {
-            Name = "Arsha - Content",
+            Name = "Corporate Theme - Content",
             Description = "Add professionally styled content to your page",
             Version = "6.0.0",
-            PackageName = "Oqtane.Theme.Arsha"
+            PackageName = "Oqtane.Theme.Corporate"
         };
     }
 }

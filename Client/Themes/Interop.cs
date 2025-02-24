@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
 using System.Threading.Tasks;
 
-namespace Oqtane.Theme.Arsha
+namespace Oqtane.Theme.Corporate
 {
     public class Interop
     {
@@ -17,7 +17,7 @@ namespace Oqtane.Theme.Arsha
             try
             {
                 await _jsRuntime.InvokeVoidAsync(
-                    "Oqtane.Arsha.load");
+                    "Oqtane.Theme.load");
             }
             catch
             {

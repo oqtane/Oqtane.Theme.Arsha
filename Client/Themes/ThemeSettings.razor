@@ -1,4 +1,4 @@
-@namespace Oqtane.Theme.Arsha
+@namespace Oqtane.Theme.Corporate
 @inherits ModuleBase
 @implements Oqtane.Interfaces.ISettingsControl
 @inject ISettingService SettingService
@@ -7,7 +7,22 @@
 
 <div class="container">
     <div class="row mb-1 align-items-center">
-        <Label Class="col-sm-3" For="heroHTML" HelpText="Specify if you wish to include a hero section for this page">Hero Section?</Label>
+        <Label Class="col-sm-3" For="_navbutton" HelpText="Specify if you wish to include a button in the navigation for this site">Nav Button?</Label>
+        <div class="col-sm-9">
+            <select id="navbutton" class="form-select" @bind="@_navbutton">
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+            @if (_navbutton == "True")
+            {
+                <input id="navbuttoncode" class="form-control" placeholder="Button Text" @bind="@_navbuttontext" />
+                <input id="navbuttonurl" class="form-control" placeholder="Button Url" @bind="@_navbuttonurl" />
+            }
+        </div>
+    </div>
+    <br />
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="heroHTML" HelpText="Specify if you wish to include a hero banner for this page">Hero Banner?</Label>
         <div class="col-sm-9">
             <select id="heroHTML" class="form-select" value="@_hero" @onchange="(e => HeroChanged(e))">
                 <option value="True">Yes</option>
@@ -19,6 +34,17 @@
             }
         </div>
     </div>
+    <br />
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" For="layout" HelpText="Specify the default layout for the page content">Content Layout:</Label>
+        <div class="col-sm-9">
+            <select id="layout" class="form-select" @bind="@_layout">
+                <option value="standard">Standard Width</option>
+                <option value="full">Full Width</option>
+            </select>
+        </div>
+    </div>
+    <br />
     <div class="row mb-1 align-items-center">
         <Label Class="col-sm-3" For="_footerHTML" HelpText="Specify if you wish to include a footer section for this site">Footer Section?</Label>
         <div class="col-sm-9">
@@ -36,8 +62,12 @@
 
 @code {
     private int pageId = -1;
+    private string _navbutton = "False";
+    private string _navbuttontext = "";
+    private string _navbuttonurl = "";
     private string _hero = "False";
     private string _heroHTML = "";
+    private string _layout = "";
     private string _footer = "False";
     private string _footerHTML = "";
 
@@ -60,11 +90,24 @@
 
     private async Task LoadSettings()
     {
+        // page settings
         var settings = await SettingService.GetPageSettingsAsync(pageId);
         _heroHTML = SettingService.GetSetting(settings, GetType().Namespace + ":Hero", "");
         _hero = (_heroHTML == "") ? "False" : "True";
+        _layout = SettingService.GetSetting(settings, GetType().Namespace + ":Layout", "");
+        if (string.IsNullOrEmpty(_layout))
+        {
+            _layout = (_hero == "False") ? "standard" : "full";
+        }
 
+        // site settings
         settings = PageState.Site.Settings;
+        _navbuttontext = SettingService.GetSetting(settings, GetType().Namespace + ":NavButtonText", "");
+        _navbuttonurl = SettingService.GetSetting(settings, GetType().Namespace + ":NavButtonUrl", "");
+        if (!string.IsNullOrEmpty(_navbuttontext) && !string.IsNullOrEmpty(_navbuttonurl))
+        {
+            _navbutton = "True";
+        }
         _footerHTML = SettingService.GetSetting(settings, GetType().Namespace + ":Footer", "");
         _footer = (_footerHTML == "") ? "False" : "True";
     }
@@ -78,10 +121,12 @@
             {
                 _heroHTML = Localizer["Hero"];
             }
+            _layout = "full";
         }
         else
         {
             _heroHTML = "";
+            _layout = "standard";
         }
     }
 
@@ -105,11 +150,16 @@
     {
         try
         {
+            // page settings
             var settings = await SettingService.GetPageSettingsAsync(pageId);
             settings = SettingService.SetSetting(settings, GetType().Namespace + ":Hero", _heroHTML);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":Layout", _layout);
             await SettingService.UpdatePageSettingsAsync(settings, pageId);
 
+            // site settings
             settings = await SettingService.GetSiteSettingsAsync(PageState.Site.SiteId);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":NavButtonText", _navbuttontext);
+            settings = SettingService.SetSetting(settings, GetType().Namespace + ":NavButtonUrl", _navbuttonurl);
             settings = SettingService.SetSetting(settings, GetType().Namespace + ":Footer", _footerHTML);
             await SettingService.UpdateSiteSettingsAsync(settings, PageState.Site.SiteId);
         }

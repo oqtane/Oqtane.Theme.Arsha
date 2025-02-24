@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About Us" xml:space="preserve">
+    <value>    &lt;!-- About Section --&gt;
+    &lt;section id="about" class="about section"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;About Us&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row gy-4"&gt;
+          &lt;div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100"&gt;
+            &lt;p&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            &lt;/p&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;i class="bi bi-check2-circle"&gt;&lt;/i&gt; &lt;span&gt;Ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bi bi-check2-circle"&gt;&lt;/i&gt; &lt;span&gt;Duis aute irure dolor in reprehenderit in voluptate velit.&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;i class="bi bi-check2-circle"&gt;&lt;/i&gt; &lt;span&gt;Ullamco laboris nisi ut aliquip ex ea commodo&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"&gt;
+            &lt;p&gt;Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. &lt;/p&gt;
+            &lt;a href="#" class="read-more"&gt;&lt;span&gt;Read More&lt;/span&gt;&lt;i class="bi bi-arrow-right"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End About Section --&gt;</value>
+  </data>
+  <data name="Call To Action" xml:space="preserve">
+    <value>    &lt;!-- Call To Action Section --&gt;
+    &lt;section id="call-to-action" class="call-to-action section dark-background"&gt;
+      &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/cta-bg.jpg" alt=""&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row" data-aos="zoom-in" data-aos-delay="100"&gt;
+          &lt;div class="col-xl-9 text-center text-xl-start"&gt;
+            &lt;h3&gt;Call To Action&lt;/h3&gt;
+            &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xl-3 cta-btn-container text-center"&gt;
+            &lt;a class="cta-btn align-middle" href="#"&gt;Call To Action&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Call To Action Section --&gt;</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>    &lt;!-- Clients Section --&gt;
+    &lt;section id="clients" class="clients section light-background"&gt;
+      &lt;div class="container" data-aos="zoom-in"&gt;
+        &lt;div class="swiper init-swiper"&gt;
+          &lt;script type="application/json" class="swiper-config"&gt;
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          &lt;/script&gt;
+          &lt;div class="swiper-wrapper align-items-center"&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-1.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-2.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-3.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-4.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-5.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-6.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-7.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/clients/client-8.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Clients Section --&gt;</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>    &lt;!-- FAQ Section --&gt;
+    &lt;section id="faq-2" class="faq-2 section light-background"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+        &lt;p&gt;Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row justify-content-center"&gt;
+          &lt;div class="col-lg-10"&gt;
+            &lt;div class="faq-container"&gt;
+              &lt;div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200"&gt;
+                &lt;i class="faq-icon bi bi-question-circle"&gt;&lt;/i&gt;
+                &lt;h3&gt;Non consectetur a erat nam at lectus urna duis?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item" data-aos="fade-up" data-aos-delay="300"&gt;
+                &lt;i class="faq-icon bi bi-question-circle"&gt;&lt;/i&gt;
+                &lt;h3&gt;Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item" data-aos="fade-up" data-aos-delay="400"&gt;
+                &lt;i class="faq-icon bi bi-question-circle"&gt;&lt;/i&gt;
+                &lt;h3&gt;Dolor sit amet consectetur adipiscing elit pellentesque?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item" data-aos="fade-up" data-aos-delay="500"&gt;
+                &lt;i class="faq-icon bi bi-question-circle"&gt;&lt;/i&gt;
+                &lt;h3&gt;Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item" data-aos="fade-up" data-aos-delay="600"&gt;
+                &lt;i class="faq-icon bi bi-question-circle"&gt;&lt;/i&gt;
+                &lt;h3&gt;Tempus quam pellentesque nec nam aliquam sem et tortor consequat?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- FAQ Section --&gt;</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>    &lt;!-- Portfolio Section --&gt;
+    &lt;section id="portfolio" class="portfolio section"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Portfolio&lt;/h2&gt;
+        &lt;p&gt;Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order"&gt;
+          &lt;ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100"&gt;
+            &lt;li data-filter="*" class="filter-active"&gt;All&lt;/li&gt;
+            &lt;li data-filter=".filter-app"&gt;App&lt;/li&gt;
+            &lt;li data-filter=".filter-product"&gt;Card&lt;/li&gt;
+            &lt;li data-filter=".filter-branding"&gt;Web&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200"&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;App 1&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Product 1&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Branding 1&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;App 2&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Product 2&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Branding 2&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;App 3&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Product 3&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"&gt;
+              &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt=""&gt;
+              &lt;div class="portfolio-info"&gt;
+                &lt;h4&gt;Branding 3&lt;/h4&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit&lt;/p&gt;
+                &lt;a href="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"&gt;&lt;i class="bi bi-zoom-in"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="portfolio-details.html" title="More Details" class="details-link"&gt;&lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Portfolio Section --&gt;</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>    &lt;!-- Pricing Section --&gt;
+    &lt;section id="pricing" class="pricing section light-background"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Pricing&lt;/h2&gt;
+        &lt;p&gt;Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row gy-4"&gt;
+          &lt;div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100"&gt;
+            &lt;div class="pricing-item"&gt;
+              &lt;h3&gt;Free Plan&lt;/h3&gt;
+              &lt;h4&gt;&lt;sup&gt;$&lt;/sup&gt;0&lt;span&gt; / month&lt;/span&gt;&lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Quam adipiscing vitae proin&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nec feugiat nisl pretium&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nulla at volutpat diam uteera&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="na"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt; &lt;span&gt;Pharetra massa massa ultricies&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="na"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt; &lt;span&gt;Massa ultricies mi quis hendrerit&lt;/span&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;a href="#" class="buy-btn"&gt;Buy Now&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200"&gt;
+            &lt;div class="pricing-item featured"&gt;
+              &lt;h3&gt;Business Plan&lt;/h3&gt;
+              &lt;h4&gt;&lt;sup&gt;$&lt;/sup&gt;29&lt;span&gt; / month&lt;/span&gt;&lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Quam adipiscing vitae proin&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nec feugiat nisl pretium&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nulla at volutpat diam uteera&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Pharetra massa massa ultricies&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Massa ultricies mi quis hendrerit&lt;/span&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;a href="#" class="buy-btn"&gt;Buy Now&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300"&gt;
+            &lt;div class="pricing-item"&gt;
+              &lt;h3&gt;Developer Plan&lt;/h3&gt;
+              &lt;h4&gt;&lt;sup&gt;$&lt;/sup&gt;49&lt;span&gt; / month&lt;/span&gt;&lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Quam adipiscing vitae proin&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nec feugiat nisl pretium&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Nulla at volutpat diam uteera&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Pharetra massa massa ultricies&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt; &lt;span&gt;Massa ultricies mi quis hendrerit&lt;/span&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;a href="#" class="buy-btn"&gt;Buy Now&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Pricing Section --&gt;</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>    &lt;!-- Services Section --&gt;
+    &lt;section id="services" class="services section light-background"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Services&lt;/h2&gt;
+        &lt;p&gt;Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row gy-4"&gt;
+          &lt;div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100"&gt;
+            &lt;div class="service-item position-relative"&gt;
+              &lt;div class="icon"&gt;&lt;i class="bi bi-activity icon"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;h4&gt;&lt;a href="" class="stretched-link"&gt;Lorem Ipsum&lt;/a&gt;&lt;/h4&gt;
+              &lt;p&gt;Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200"&gt;
+            &lt;div class="service-item position-relative"&gt;
+              &lt;div class="icon"&gt;&lt;i class="bi bi-bounding-box-circles icon"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;h4&gt;&lt;a href="" class="stretched-link"&gt;Sed ut perspici&lt;/a&gt;&lt;/h4&gt;
+              &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300"&gt;
+            &lt;div class="service-item position-relative"&gt;
+              &lt;div class="icon"&gt;&lt;i class="bi bi-calendar4-week icon"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;h4&gt;&lt;a href="" class="stretched-link"&gt;Magni Dolores&lt;/a&gt;&lt;/h4&gt;
+              &lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400"&gt;
+            &lt;div class="service-item position-relative"&gt;
+              &lt;div class="icon"&gt;&lt;i class="bi bi-broadcast icon"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;h4&gt;&lt;a href="" class="stretched-link"&gt;Nemo Enim&lt;/a&gt;&lt;/h4&gt;
+              &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Services Section --&gt;</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>    &lt;!-- Skills Section --&gt;
+    &lt;section id="skills" class="skills section"&gt;
+      &lt;div class="container" data-aos="fade-up" data-aos-delay="100"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-lg-6 d-flex align-items-center"&gt;
+            &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/skills.png" class="img-fluid" alt=""&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-6 pt-4 pt-lg-0 content"&gt;
+            &lt;h3&gt;Voluptatem dignissimos provident quasi corporis voluptas&lt;/h3&gt;
+            &lt;p class="fst-italic"&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            &lt;/p&gt;
+            &lt;div class="skills-content skills-animation"&gt;
+              &lt;div class="progress"&gt;
+                &lt;span class="skill"&gt;&lt;span&gt;HTML&lt;/span&gt; &lt;i class="val"&gt;100%&lt;/i&gt;&lt;/span&gt;
+                &lt;div class="progress-bar-wrap"&gt;
+                  &lt;div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="progress"&gt;
+                &lt;span class="skill"&gt;&lt;span&gt;CSS&lt;/span&gt; &lt;i class="val"&gt;90%&lt;/i&gt;&lt;/span&gt;
+                &lt;div class="progress-bar-wrap"&gt;
+                  &lt;div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="progress"&gt;
+                &lt;span class="skill"&gt;&lt;span&gt;JavaScript&lt;/span&gt; &lt;i class="val"&gt;75%&lt;/i&gt;&lt;/span&gt;
+                &lt;div class="progress-bar-wrap"&gt;
+                  &lt;div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="progress"&gt;
+                &lt;span class="skill"&gt;&lt;span&gt;Photoshop&lt;/span&gt; &lt;i class="val"&gt;55%&lt;/i&gt;&lt;/span&gt;
+                &lt;div class="progress-bar-wrap"&gt;
+                  &lt;div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Skills Section --&gt;</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>    &lt;!-- Team Section --&gt;
+    &lt;section id="team" class="team section"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Team&lt;/h2&gt;
+        &lt;p&gt;Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row gy-4"&gt;
+          &lt;div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"&gt;
+            &lt;div class="team-member d-flex align-items-start"&gt;
+              &lt;div class="pic"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/team/team-1.jpg" class="img-fluid" alt=""&gt;&lt;/div&gt;
+              &lt;div class="member-info"&gt;
+                &lt;h4&gt;Walter White&lt;/h4&gt;
+                &lt;span&gt;Chief Executive Officer&lt;/span&gt;
+                &lt;p&gt;Explicabo voluptatem mollitia et repellat qui dolorum quasi&lt;/p&gt;
+                &lt;div class="social"&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt; &lt;i class="bi bi-linkedin"&gt;&lt;/i&gt; &lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"&gt;
+            &lt;div class="team-member d-flex align-items-start"&gt;
+              &lt;div class="pic"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/team/team-2.jpg" class="img-fluid" alt=""&gt;&lt;/div&gt;
+              &lt;div class="member-info"&gt;
+                &lt;h4&gt;Sarah Jhonson&lt;/h4&gt;
+                &lt;span&gt;Product Manager&lt;/span&gt;
+                &lt;p&gt;Aut maiores voluptates amet et quis praesentium qui senda para&lt;/p&gt;
+                &lt;div class="social"&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt; &lt;i class="bi bi-linkedin"&gt;&lt;/i&gt; &lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-6" data-aos="fade-up" data-aos-delay="300"&gt;
+            &lt;div class="team-member d-flex align-items-start"&gt;
+              &lt;div class="pic"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/team/team-3.jpg" class="img-fluid" alt=""&gt;&lt;/div&gt;
+              &lt;div class="member-info"&gt;
+                &lt;h4&gt;William Anderson&lt;/h4&gt;
+                &lt;span&gt;CTO&lt;/span&gt;
+                &lt;p&gt;Quisquam facilis cum velit laborum corrupti fuga rerum quia&lt;/p&gt;
+                &lt;div class="social"&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt; &lt;i class="bi bi-linkedin"&gt;&lt;/i&gt; &lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-6" data-aos="fade-up" data-aos-delay="400"&gt;
+            &lt;div class="team-member d-flex align-items-start"&gt;
+              &lt;div class="pic"&gt;&lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/team/team-4.jpg" class="img-fluid" alt=""&gt;&lt;/div&gt;
+              &lt;div class="member-info"&gt;
+                &lt;h4&gt;Amanda Jepson&lt;/h4&gt;
+                &lt;span&gt;Accountant&lt;/span&gt;
+                &lt;p&gt;Dolorum tempora officiis odit laborum officiis et et accusamus&lt;/p&gt;
+                &lt;div class="social"&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href=""&gt; &lt;i class="bi bi-linkedin"&gt;&lt;/i&gt; &lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Team Section --&gt;</value>
+  </data>
+  <data name="Testimonials" xml:space="preserve">
+    <value>    &lt;!-- Testimonials Section --&gt;
+    &lt;section id="testimonials" class="testimonials section"&gt;
+      &lt;div class="container section-title" data-aos="fade-up"&gt;
+        &lt;h2&gt;Testimonials&lt;/h2&gt;
+        &lt;p&gt;Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="container" data-aos="fade-up" data-aos-delay="100"&gt;
+        &lt;div class="swiper init-swiper"&gt;
+          &lt;script type="application/json" class="swiper-config"&gt;
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          &lt;/script&gt;
+          &lt;div class="swiper-wrapper"&gt;
+            &lt;div class="swiper-slide"&gt;
+              &lt;div class="testimonial-item"&gt;
+                &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""&gt;
+                &lt;h3&gt;Saul Goodman&lt;/h3&gt;
+                &lt;h4&gt;Ceo &amp;amp; Founder&lt;/h4&gt;
+                &lt;div class="stars"&gt;
+                  &lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+                  &lt;i class="bi bi-quote quote-icon-left"&gt;&lt;/i&gt;
+                  &lt;span&gt;Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.&lt;/span&gt;
+                  &lt;i class="bi bi-quote quote-icon-right"&gt;&lt;/i&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;
+              &lt;div class="testimonial-item"&gt;
+                &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""&gt;
+                &lt;h3&gt;Sara Wilsson&lt;/h3&gt;
+                &lt;h4&gt;Designer&lt;/h4&gt;
+                &lt;div class="stars"&gt;
+                  &lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+                  &lt;i class="bi bi-quote quote-icon-left"&gt;&lt;/i&gt;
+                  &lt;span&gt;Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.&lt;/span&gt;
+                  &lt;i class="bi bi-quote quote-icon-right"&gt;&lt;/i&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;
+              &lt;div class="testimonial-item"&gt;
+                &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""&gt;
+                &lt;h3&gt;Jena Karlis&lt;/h3&gt;
+                &lt;h4&gt;Store Owner&lt;/h4&gt;
+                &lt;div class="stars"&gt;
+                  &lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+                  &lt;i class="bi bi-quote quote-icon-left"&gt;&lt;/i&gt;
+                  &lt;span&gt;Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.&lt;/span&gt;
+                  &lt;i class="bi bi-quote quote-icon-right"&gt;&lt;/i&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;
+              &lt;div class="testimonial-item"&gt;
+                &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""&gt;
+                &lt;h3&gt;Matt Brandon&lt;/h3&gt;
+                &lt;h4&gt;Freelancer&lt;/h4&gt;
+                &lt;div class="stars"&gt;
+                  &lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+                  &lt;i class="bi bi-quote quote-icon-left"&gt;&lt;/i&gt;
+                  &lt;span&gt;Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.&lt;/span&gt;
+                  &lt;i class="bi bi-quote quote-icon-right"&gt;&lt;/i&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-slide"&gt;
+              &lt;div class="testimonial-item"&gt;
+                &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""&gt;
+                &lt;h3&gt;John Larson&lt;/h3&gt;
+                &lt;h4&gt;Entrepreneur&lt;/h4&gt;
+                &lt;div class="stars"&gt;
+                  &lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+                  &lt;i class="bi bi-quote quote-icon-left"&gt;&lt;/i&gt;
+                  &lt;span&gt;Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.&lt;/span&gt;
+                  &lt;i class="bi bi-quote quote-icon-right"&gt;&lt;/i&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Testimonials Section --&gt;</value>
+  </data>
+  <data name="Why Us" xml:space="preserve">
+    <value>    &lt;!-- Why Us Section --&gt;
+    &lt;section id="why-us" class="section why-us light-background" data-builder="section"&gt;
+      &lt;div class="container-fluid"&gt;
+        &lt;div class="row gy-4"&gt;
+          &lt;div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1"&gt;
+            &lt;div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100"&gt;
+              &lt;h3&gt;&lt;span&gt;Eum ipsam laborum deleniti &lt;/span&gt;&lt;strong&gt;velit pariatur architecto aut nihil&lt;/strong&gt;&lt;/h3&gt;
+              &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200"&gt;
+              &lt;div class="faq-item faq-active"&gt;
+                &lt;h3&gt;&lt;span&gt;01&lt;/span&gt; Non consectetur a erat nam at lectus urna duis?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item"&gt;
+                &lt;h3&gt;&lt;span&gt;02&lt;/span&gt; Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class="faq-item"&gt;
+                &lt;h3&gt;&lt;span&gt;03&lt;/span&gt; Dolor sit amet consectetur adipiscing elit pellentesque?&lt;/h3&gt;
+                &lt;div class="faq-content"&gt;
+                  &lt;p&gt;Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;i class="faq-toggle bi bi-chevron-right"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-5 order-1 order-lg-2 why-us-img"&gt;
+            &lt;img src="[wwwroot]Themes/Oqtane.Theme.Corporate/assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- End Why Us Section --&gt;</value>
+  </data>
+</root>

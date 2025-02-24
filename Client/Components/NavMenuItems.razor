@@ -1,4 +1,4 @@
-@namespace Oqtane.Theme.Arsha
+@namespace Oqtane.Theme.Corporate
 @inherits MenuItemsBase
 
 <ul>
@@ -19,13 +19,13 @@
                 if (childPage.PageId == PageState.Page.PageId)
                 {
                     <li>
-                        <a class="nav-link active" @attributes="_attributes">@childPage.Name</a>
+                        <a class="active" @attributes="_attributes">@childPage.Name</a>
                     </li>
                 }
                 else
                 {
                     <li>
-                        <a class="nav-link" @attributes="_attributes">@childPage.Name</a>
+                        <a @attributes="_attributes">@childPage.Name</a>
                     </li>
                 }
             }
@@ -39,15 +39,8 @@
         else
         {
             <li class="dropdown">
-                <a @attributes="_attributes"><span>@childPage.Name</span> 
-                    @if (childPage.Level == 0)
-                    {
-                        <i class="bi bi-chevron-down"></i>
-                    }
-                    else
-                    {
-                        <i class="bi bi-chevron-right"></i>
-                    }
+                <a @attributes="_attributes"><span>@childPage.Name</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i>
                 </a>
                 <NavMenuItems ParentPage="childPage" Pages="Pages" />
             </li>

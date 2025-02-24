@@ -1,7 +1,7 @@
 @using Oqtane.Modules.HtmlText.Services
 @using Oqtane.Modules.HtmlText.Models
 
-@namespace Oqtane.Theme.Arsha
+@namespace Oqtane.Module.Corporate
 @inherits ModuleBase
 @inject NavigationManager NavigationManager
 @inject IHtmlTextService HtmlTextService
@@ -24,7 +24,8 @@
                 <option value="Portfolio">Portfolio</option>
                 <option value="Team">Team</option>
                 <option value="Pricing">Pricing</option>
-                <option value="FAQ">FAQ</option>
+                <option value="Testimonials">Testimonials</option>
+                <option value="FAQs">FAQs</option>
             </select>
         </div>
     </div>
@@ -64,9 +65,9 @@
         module.ModuleDefinitionName = "Oqtane.Modules.HtmlText, Oqtane.Client";
         await ModuleService.UpdateModuleAsync(module);
 
-        // hide page module title
+        // update page module title
         var pagemodule = await PageModuleService.GetPageModuleAsync(ModuleState.PageModuleId);
-        pagemodule.Title = "// " + _content;
+        pagemodule.Title = _content;
         await PageModuleService.UpdatePageModuleAsync(pagemodule);
 
         // refresh page

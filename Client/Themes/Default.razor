@@ -1,27 +1,30 @@
 @using System.Net
-@namespace Oqtane.Theme.Arsha
+@namespace Oqtane.Theme.Corporate
 @inherits ThemeBase
 @inject NavigationManager NavigationManager
 @inject ISettingService SettingService
 @inject IStringLocalizer<Default> Localizer
 
-<!-- ======= Header ======= -->
+<!-- Header -->
 <header id="header" class="@_headerclass">
-    <div class="container d-flex align-items-center">
-        <a id="top"></a>
-        @if (PageState.Site.LogoFileId != null)
-        {
-            <a href="@PageState.Alias.Path" class="logo me-auto">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a href="@PageState.Alias.Path" class="logo d-flex align-items-center me-auto">
+            @if (PageState.Site.LogoFileId != null)
+            {
                 <img class="img-fluid" src="@Utilities.FileUrl(PageState.Alias, PageState.Site.LogoFileId.Value)" alt="@PageState.Site.Name" />
-            </a>
-        }
-        else
-        {
-            <h1 class="logo me-auto"><a href="/">@PageState.Site.Name</a></h1>
-        }
-        <nav id="navbar" class="navbar">
+            }
+            else
+            {
+                <h1 class="sitename">@PageState.Site.Name</h1>
+            }
+        </a>
+        <nav id="navmenu" class="navmenu">
             <NavMenu />
         </nav>
+        @if (!string.IsNullOrEmpty(_navbuttontext) && !string.IsNullOrEmpty(_navbuttonurl))
+        {
+            <a class="btn-getstarted" href="@_navbuttonurl">@_navbuttontext</a>
+        }
         <div class="mx-3 controls-group">
             <UserProfile /> <Login /> <ControlPanel />
             @if (UserSecurity.IsAuthorized(PageState.User, PermissionNames.Edit, PageState.Page.PermissionList))
@@ -35,49 +38,47 @@
 </header>
 <!-- End Header -->
 
-@if (!string.IsNullOrEmpty(_hero))
-{
-    <!-- ======= Hero Section ======= -->
-    @((MarkupString)_hero)
-    <!-- End Hero -->
-    <!-- ======= Main ======= -->
-    <main id="main">
-        <Pane Name="@PaneNames.Default" />
-    </main>
-    <!-- End #main -->
-}
-else
-{
-    <!-- ======= Main ======= -->
-    <main id="main">
-        <!-- ======= Breadcrumbs ======= -->
-        <section class="breadcrumbs">
+<!-- Main Section -->
+<main class="main">
+    @if (!string.IsNullOrEmpty(_hero))
+    {
+        <!-- Hero Section -->
+        @((MarkupString)_hero)
+        <!-- End Hero Section -->
+    }
+    else
+    {
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
             <div class="container">
-                <h2 class="mt-2">@PageState.Page.Name</h2>
+                <Breadcrumbs />
+                <h1>@PageState.Page.Name</h1>
             </div>
-        </section>
-        <!-- End Breadcrumbs -->
-        <section class="inner-page">
-            <div class="container">
-                <Pane Name="@PaneNames.Default" />
-            </div>
-        </section>
-    </main>
-    <!-- End Main -->
+        </div>
+        <!-- End Page Title -->
+    }
+    <Pane Name="@PaneNames.Default" />
+</main>
+<!-- End Main -->
+
+@if (!string.IsNullOrEmpty(_footer))
+{
+    <!-- Footer Section -->
+    @((MarkupString)_footer)
+    <!-- End Footer -->
 }
 
-<!-- ======= Footer ======= -->
-@((MarkupString)_footer)
-<!-- End Footer -->
-
-<a href="@NavigateUrl()" class="back-to-top d-flex align-items-center justify-content-center" data-enhance-nav="false"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a href="@NavigateUrl()" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 @code {
     public override string Name => "Default";
     public override string Panes => PaneNames.Default;
 
-    private string _hero = "";
     private string _headerclass = "";
+    private string _hero = "";
+    private string _navbuttontext = "";
+    private string _navbuttonurl = "";
     private string _footer = "";
     private string _themesettingsurl = "";
 
@@ -85,14 +86,18 @@ else
     {
         try
         {
+            // page settings
+            _headerclass = "header d-flex align-items-center sticky-top";
             _hero = SettingService.GetSetting(PageState.Page.Settings, GetType().Namespace + ":Hero", "");
-            _headerclass = "fixed-top header-inner-pages";
             if (!string.IsNullOrEmpty(_hero))
             {
+                _headerclass = "header d-flex align-items-center fixed-top";
                 _hero = Utilities.FormatContent(_hero, PageState.Alias, "render");
-                _headerclass = "fixed-top";
             }
 
+            // site settings
+            _navbuttontext = SettingService.GetSetting(PageState.Site.Settings, GetType().Namespace + ":NavButtonText", "");
+            _navbuttonurl = SettingService.GetSetting(PageState.Site.Settings, GetType().Namespace + ":NavButtonUrl", "");
             _footer = SettingService.GetSetting(PageState.Site.Settings, GetType().Namespace + ":Footer", "");
             _footer = Utilities.FormatContent(_footer, PageState.Alias, "render");
 
